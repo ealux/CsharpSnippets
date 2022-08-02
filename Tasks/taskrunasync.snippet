@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Task.Run(async)</Title>
+			<Shortcut>taskrunasync</Shortcut>
+			<Description>Фрагмент кода для Task.Run(async()=>{})</Description>
+			<Author>Egor Lyukhanov</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>System.Threading.Tasks</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Имя свойства</ToolTip>
+					<Default>MyProperty</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+        <![CDATA[Task.Run(async()=>
+			{
+				await $end$
+			});]]>
+      </Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
