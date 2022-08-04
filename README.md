@@ -2,8 +2,12 @@
 
 Some helpfull snippets in everyday development for **collections**, **methods**, **Parallel** class, **properties** and **tasks**.
 
+##### Add to Visual Studio
+
 To add snippets to **Visual Studio** copy files to the origin VS C# snippets directory. For example, in my system this is:  
 `D:\Program Files\Microsoft Visual Studio\2022\Community\VC#\Snippets\1049\Visual C#\`
+
+##### Use
 
 Use by writing `name` part without extension from `name.snippet`. For example, for `list.snippet` write `list` and press **[Tab]** key.
 
