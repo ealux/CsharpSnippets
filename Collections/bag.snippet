@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>ConcurrentBag{T}</Title>
+			<Shortcut>bag</Shortcut>
+			<Description>Generic concurrent collection of {T}</Description>
+			<Author>Egor Lyukhanov</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>System.Collections.Generic</Namespace>
+				</Import>
+				<Import>
+					<Namespace>System.Collections.Concurrent</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Collection item type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>ConcurrentBag name</ToolTip>
+					<Default>bag</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[ConcurrentBag<$type$> $name$ = new ConcurrentBag<$type$>();]]></Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

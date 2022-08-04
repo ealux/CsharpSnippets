@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Parallel.ForEach with aggregation</Title>
+			<Shortcut>foreachpagg</Shortcut>
+			<Description>Code snippet for Parallel.ForEach() with aggregation</Description>
+			<Author>Egor Lyukhanov</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>System.Threading</Namespace>
+					<Namespace>System.Threading.Tasks</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>aggType</ID>
+					<ToolTip>Type of aggregation variable</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>agg</ID>
+					<ToolTip>Type of aggregation variable</ToolTip>
+					<Default>aggregatedValue</Default>
+				</Literal>
+				<Literal>
+					<ID>collection</ID>
+					<ToolTip>Collection for iteration</ToolTip>
+					<Default>collection</Default>
+				</Literal>
+				<Literal>
+					<ID>operation</ID>
+					<ToolTip>Interlocked operation</ToolTip>
+					<Default>Add</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp">
+		$aggType$ $agg$ = 0;
+
+        <![CDATA[Parallel.ForEach($collection$, () => 0, (item, state, localAgg) =>
+        	{
+				$end$
+				return localAgg;
+        	},
+			(localAgg) => Interlocked.$operation$(ref $agg$, localAgg)
+		);]]>
+      </Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Dictionary{T, U}</Title>
+			<Shortcut>dict</Shortcut>
+			<Description>Generic Dictionary{T, U}</Description>
+			<Author>Egor Lyukhanov</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Imports>
+				<Import>
+					<Namespace>System.Collections.Generic</Namespace>
+				</Import>
+			</Imports>
+			<Declarations>
+				<Literal>
+					<ID>typeKey</ID>
+					<ToolTip>Type of keys</ToolTip>
+					<Default>int</Default>					
+				</Literal>
+				<Literal>
+					<ID>typeValue</ID>
+					<ToolTip>Type of values</ToolTip>
+					<Default>string</Default>
+				</Literal>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Dictionary name</ToolTip>
+					<Default>dict</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Dictionary<$typeKey$, $typeValue$> $name$ = new Dictionary<$typeKey$, $typeValue$>();]]></Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
